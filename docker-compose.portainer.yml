@@ -1,0 +1,90 @@
+# Adapted for deployment via Portainer (no Traefik / no external "frontend"
+# network here - see conversation notes).
+#
+# Routing works like this environment's other apps (confirmed via the
+# "authentik" Proxy Host in Nginx Proxy Manager): NPM reaches backend
+# containers by container/service name over a shared Docker network, not
+# via published host ports. After deploying this stack, connect the
+# "nginx-proxy-manager" container to this stack's network
+# (Portainer -> Containers -> nginx-proxy-manager -> Join network ->
+# <project>_app), then create a Proxy Host pointing at:
+#   Forward Hostname: nginx
+#   Forward Port: 8080
+
+networks:
+  app:
+    driver: bridge
+    internal: false
+
+services:
+  mariadb:
+    image: itkdev/mariadb:latest
+    restart: unless-stopped
+    networks:
+      - app
+    healthcheck:
+      test: ["CMD", "healthcheck.sh", "--connect", "--innodb_initialized"]
+      start_period: 10s
+      interval: 10s
+      timeout: 5s
+      retries: 3
+    environment:
+      - MYSQL_ROOT_PASSWORD=${MARIADB_ROOT_PASSWORD}
+      - MYSQL_USER=ai-screening
+      - MYSQL_PASSWORD=${MARIADB_PASSWORD}
+      - MYSQL_DATABASE=ai-screening
+    volumes:
+      - mariadb-data:/var/lib/mysql
+
+  phpfpm:
+    image: itkdev/php8.4-fpm:alpine
+    restart: unless-stopped
+    networks:
+      - app
+    environment:
+      - PHP_MAX_EXECUTION_TIME=30
+      - PHP_MEMORY_LIMIT=256M
+      - PHP_POST_MAX_SIZE=8M
+      - PHP_UPLOAD_MAX_FILESIZE=10M
+      # Let drush know the site uri (makes using --uri redundant)
+      - DRUSH_OPTIONS_URI=https://${COMPOSE_SERVER_DOMAIN}
+    depends_on:
+      mariadb:
+        condition: service_healthy
+      memcached:
+        condition: service_healthy
+    volumes:
+      - .:/app
+      - ai-screening-files:/app/web/sites/default/files
+      - ai-screening-private:/app/private-files
+
+  nginx:
+    image: nginxinc/nginx-unprivileged:alpine
+    restart: unless-stopped
+    networks:
+      - app
+    depends_on:
+      - phpfpm
+    volumes:
+      - ./.docker/templates:/etc/nginx/templates:ro
+      - ./.docker/nginx.conf:/etc/nginx/nginx.conf:ro
+      - .:/app
+      - ai-screening-files:/app/web/sites/default/files
+    environment:
+      NGINX_FPM_SERVICE: ${COMPOSE_PROJECT_NAME}-phpfpm-1:9000
+      NGINX_WEB_ROOT: /app/web
+      NGINX_PORT: 8080
+      NGINX_MAX_BODY_SIZE: 10M
+
+  memcached:
+    image: memcached:alpine
+    restart: unless-stopped
+    networks:
+      - app
+    environment:
+      - MEMCACHED_CACHE_SIZE=128
+
+volumes:
+  mariadb-data:
+  ai-screening-files:
+  ai-screening-private:
