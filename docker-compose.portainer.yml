@@ -60,7 +60,6 @@ services:
       - phpfpm
     volumes:
       - ./.docker/templates:/etc/nginx/templates:ro
-      - ./.docker/nginx.conf:/etc/nginx/nginx.conf:ro
       - .:/app
       - ai-screening-files:/app/web/sites/default/files
     environment:
