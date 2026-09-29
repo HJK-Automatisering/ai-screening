@@ -74,6 +74,10 @@ services:
     restart: unless-stopped
     networks:
       - app
+    healthcheck:
+      test: echo "version" | nc -vn -w 1 127.0.0.1 11211
+      interval: 10s
+      retries: 60
     environment:
       - MEMCACHED_CACHE_SIZE=128
 
