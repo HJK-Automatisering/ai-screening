@@ -15,3 +15,10 @@ COPY --chown=deploy:deploy --from=theme-build /app/web/themes/custom/itkdev ./we
 RUN composer install --no-dev -o
 RUN mkdir -p /app/local-config && ln -s /app/local-config/settings.local.php web/sites/default/settings.local.php
 RUN mkdir -p web/sites/default/files /app/private-files
+
+# Trust the internal CA chain so outbound HTTPS requests to internal hosts
+# don't fail with "unable to get local issuer certificate".
+USER root
+COPY .docker/ca-certs/*.crt /usr/local/share/ca-certificates/
+RUN update-ca-certificates
+USER deploy
