@@ -49,7 +49,7 @@ services:
     volumes:
       - ai-screening-files:/app/web/sites/default/files
       - ai-screening-private:/app/private-files
-      - ai-screening-settings-local:/app/web/sites/default/settings.local.php
+      - ai-screening-settings-local:/app/local-config
 
   nginx:
     image: ghcr.io/hjk-automatisering/ai-screening-nginx:latest
