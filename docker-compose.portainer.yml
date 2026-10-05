@@ -30,7 +30,7 @@ services:
       - mariadb-data:/var/lib/mysql
 
   phpfpm:
-    image: itkdev/php8.4-fpm:alpine
+    image: ghcr.io/hjk-automatisering/ai-screening-phpfpm:latest
     restart: unless-stopped
     networks:
       - app
@@ -47,20 +47,18 @@ services:
       memcached:
         condition: service_healthy
     volumes:
-      - .:/app
       - ai-screening-files:/app/web/sites/default/files
       - ai-screening-private:/app/private-files
+      - ai-screening-settings-local:/app/web/sites/default/settings.local.php
 
   nginx:
-    image: nginxinc/nginx-unprivileged:alpine
+    image: ghcr.io/hjk-automatisering/ai-screening-nginx:latest
     restart: unless-stopped
     networks:
       - app
     depends_on:
       - phpfpm
     volumes:
-      - ./.docker/templates:/etc/nginx/templates:ro
-      - .:/app
       - ai-screening-files:/app/web/sites/default/files
     environment:
       NGINX_FPM_SERVICE: ${COMPOSE_PROJECT_NAME}-phpfpm-1:9000
@@ -84,3 +82,4 @@ volumes:
   mariadb-data:
   ai-screening-files:
   ai-screening-private:
+  ai-screening-settings-local:
