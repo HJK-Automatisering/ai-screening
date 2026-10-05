@@ -12,7 +12,7 @@ RUN composer install --no-dev --no-scripts --no-autoloader
 COPY --chown=deploy:deploy . .
 COPY --chown=deploy:deploy --from=theme-build /app/web/themes/custom/itkdev ./web/themes/custom/itkdev
 
-RUN composer install --no-dev -o --classmap-authoritative
+RUN composer install --no-dev -o
 
 FROM nginxinc/nginx-unprivileged:alpine
 COPY --from=builder /app/web /app/web
