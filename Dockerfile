@@ -14,3 +14,4 @@ COPY --chown=deploy:deploy --from=theme-build /app/web/themes/custom/itkdev ./we
 
 RUN composer install --no-dev -o
 RUN mkdir -p /app/local-config && ln -s /app/local-config/settings.local.php web/sites/default/settings.local.php
+RUN mkdir -p web/sites/default/files /app/private-files
