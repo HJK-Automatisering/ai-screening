@@ -491,3 +491,15 @@ msgstr "Ja/nej stop"
 #: modules/custom/ai_screening_project_track/src/Plugin/WebformElement/YesNoStop.php:19
 msgid "Yes/no question."
 msgstr "Ja/nej-spørgsmål."
+
+msgid "High"
+msgstr "Høj"
+
+msgid "Average"
+msgstr "Middel"
+
+msgid "Low"
+msgstr "Lav"
+
+msgid "Irrelevant"
+msgstr "Ikke relevant"
