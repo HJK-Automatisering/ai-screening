@@ -15,3 +15,5 @@ role_mappings:
     - Redaktoer
   administrator:
     - Administrator
+  superadmin:
+    - Superadmin

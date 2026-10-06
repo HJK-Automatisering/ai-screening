@@ -1,0 +1,21 @@
+uuid: d6cb06aa-e17b-48ff-b18a-edcc7116c39b
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.department
+    - taxonomy.vocabulary.project_track_type
+  module:
+    - ai_screening
+    - taxonomy
+id: superadmin
+label: Superadmin
+weight: 4
+is_admin: null
+permissions:
+  - "access site setup"
+  - "access taxonomy overview"
+  - "create terms in department"
+  - "create terms in project_track_type"
+  - "edit terms in department"
+  - "edit terms in project_track_type"
