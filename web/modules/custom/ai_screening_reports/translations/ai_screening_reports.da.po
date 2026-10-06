@@ -65,3 +65,6 @@ msgstr "Vælg projekt"
 #: modules/custom/ai_screening_reports/src/Form/CreateReport.php:63
 msgid "Fetch report"
 msgstr "Hent rapport"
+
+msgid "AI screening reports"
+msgstr "AI-screeningsrapporter"

@@ -64,7 +64,7 @@ msgstr "AI-screening-projektspor"
 
 #: modules/custom/ai_screening_project_track/ai_screening_project_track.info.yml:0
 msgid "Adds project track entity and functionality"
-msgstr ""
+msgstr "Tilføjer projektspor og tilhørende funktionalitet"
 
 #: modules/custom/ai_screening_project_track/ai_screening_project_track.info.yml:0
 msgid "Custom"
@@ -162,7 +162,7 @@ msgstr "Projektsporets titel"
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrack.php:110
 msgid "The title of the project track."
-msgstr ""
+msgstr "Projektsporets titel."
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrack.php:113
 msgid "Project track description"
@@ -170,7 +170,7 @@ msgstr "Projectssporets beskrivelse"
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrack.php:114
 msgid "A description of the project track."
-msgstr ""
+msgstr "En beskrivelse af projektsporet."
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrack.php:117
 msgid "Project track evaluation"
@@ -178,11 +178,11 @@ msgstr "Projectssporets evaluering"
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrack.php:118
 msgid "The evaluation of the project track."
-msgstr ""
+msgstr "Projektsporets vurdering."
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrack.php:122
 msgid "The overridden evaluation of the project track."
-msgstr ""
+msgstr "Den manuelt overstyrede vurdering af projektsporet."
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrack.php:125
 msgid "Project track note"
@@ -190,7 +190,7 @@ msgstr "Projectssporets note"
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrack.php:126
 msgid "A note related to project track evaluation."
-msgstr ""
+msgstr "En note til vurderingen af projektsporet."
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrack.php:129
 msgid "Project track status"
@@ -248,7 +248,7 @@ msgstr "Status for projektsporsværktøj"
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrackTool.php:96
 msgid "The status of the project track tool."
-msgstr ""
+msgstr "Status for projektsporets værktøj."
 
 #: modules/custom/ai_screening_project_track/src/Entity/ProjectTrackTool.php:99
 msgid "Tool entity type"
@@ -403,14 +403,14 @@ msgstr "Angiv venligst vægten."
 msgid "Each option must be an integer (%dimensions)"
 msgid_plural ""
 "Each option must be %cardinality integers (%dimensions) separated by comma"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Hver mulighed skal være et heltal (%dimensions)"
+msgstr[1] "Hver mulighed skal være %cardinality heltal (%dimensions) adskilt af komma"
 
 #: modules/custom/ai_screening_project_track/src/Plugin/WebformElement/WeightedRadios.php:112
 msgid "Invalid option value @values"
 msgid_plural "Invalid option values @values"
-msgstr[0] ""
-msgstr[1] ""
+msgstr[0] "Ugyldig værdi for mulighed: @values"
+msgstr[1] "Ugyldige værdier for muligheder: @values"
 
 #: modules/custom/ai_screening_project_track/src/Plugin/WebformElement/WeightedRadios.php:12
 msgid "Weighted radios"

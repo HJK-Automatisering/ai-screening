@@ -67,20 +67,188 @@ msgstr "Tryk for at vælge"
 #: themes/custom/itkdev/itkdev_project_theme/templates/stats-top-block.html.twig:18
 msgid "Project that complies to all demands for use"
 msgid_plural "Projects that comply to all demands for use"
-msgstr[0] "Project der opfylder alle krav til brug"
+msgstr[0] "Projekt der opfylder alle krav til brug"
 msgstr[1] "Projekter der opfylder alle krav til brug"
 
 #: themes/custom/itkdev/itkdev_project_theme/templates/stats-top-block.html.twig:28
 msgid "Project that complies to some demands for use"
 msgid_plural "Projects that comply to some demands for use"
-msgstr[0] "Project der opfylder nogle krav til brug"
+msgstr[0] "Projekt der opfylder nogle krav til brug"
 msgstr[1] "Projekter der opfylder nogle krav til brug"
 
 #: themes/custom/itkdev/itkdev_project_theme/templates/stats-top-block.html.twig:38
 msgid "Project that does not comply to the demands for use"
 msgid_plural "Projects that do not comply to the demands for use"
-msgstr[0] "Project der ikke opfylder kravene til brug"
+msgstr[0] "Projekt der ikke opfylder kravene til brug"
 msgstr[1] "Projekter der ikke opfylder kravene til brug"
 
 msgid "Department"
 msgstr "Magistratsafdeling"
+
+msgid "Home"
+msgstr "Forside"
+
+msgid "Breadcrumb"
+msgstr "Brødkrummesti"
+
+msgid "Open navigation menu"
+msgstr "Åbn navigationsmenu"
+
+msgid "Close navigation menu"
+msgstr "Luk navigationsmenu"
+
+msgid "Type to search..."
+msgstr "Skriv for at søge..."
+
+msgid "Log out"
+msgstr "Log ud"
+
+msgid "My profile"
+msgstr "Min profil"
+
+msgid "Skip to main content"
+msgstr "Spring til hovedindhold"
+
+msgid "Response"
+msgstr "Svar"
+
+msgid "Manual evaluation"
+msgstr "Manuel vurdering"
+
+msgid "Project evaluations"
+msgstr "Projektvurderinger"
+
+msgid "Project name"
+msgstr "Projektnavn"
+
+msgid "System evaluation"
+msgstr "Systemvurdering"
+
+msgid "Sort ascending"
+msgstr "Sortér stigende"
+
+msgid "Sort descending"
+msgstr "Sortér faldende"
+
+msgid "A Fundamental rights impact assessment (FRIA) must always be implemented."
+msgstr "Der skal altid gennemføres en konsekvensanalyse for grundlæggende rettigheder (FRIA)."
+
+msgid "Considerations"
+msgstr "Overvejelser"
+
+msgid "Demands"
+msgstr "Krav"
+
+msgid "Hide questions/answers"
+msgstr "Skjul spørgsmål/svar"
+
+msgid "Report"
+msgstr "Rapport"
+
+msgid "Rules"
+msgstr "Regler"
+
+msgid "Summary"
+msgstr "Opsummering"
+
+msgid "Task"
+msgstr "Opgave"
+
+msgid "Tasks"
+msgstr "Opgaver"
+
+msgid "You must ensure that users/citizens that use an AI-system are informed that it is an AI-system."
+msgstr "Det skal sikres, at brugere/borgere, der anvender et AI-system, bliver oplyst om, at der er tale om et AI-system."
+
+msgid "Define thresholds for all projects. This is used by the system to make a suggested evaluation by measuring all the combined answers of each project track against the corresponding thresholds."
+msgstr "Definér tærskler for alle projekter. Systemet bruger dem til at lave en foreslået vurdering ved at sammenholde de samlede svar for hvert projektspor med de tilhørende tærskler."
+
+msgid "Setup project track thresholds"
+msgstr "Opsæt tærskler for projektspor"
+
+msgid "Update user profile"
+msgstr "Opdatér brugerprofil"
+
+msgid "Evaluation: @trackName"
+msgstr "Vurdering: @trackName"
+
+msgid "Contributers"
+msgstr "Bidragydere"
+
+msgid "Owner"
+msgstr "Ejer"
+
+msgid "Project eveluation of whether it should be used"
+msgstr "Samlet vurdering af, om projektet skal tages i brug"
+
+msgid "See project report"
+msgstr "Se projektrapport"
+
+msgid "View report"
+msgstr "Se rapport"
+
+msgid "Will we?"
+msgstr "Skal vi?"
+
+msgid "Go to next page"
+msgstr "Gå til næste side"
+
+msgid "Go to previous page"
+msgstr "Gå til forrige side"
+
+msgid "Next page"
+msgstr "Næste side"
+
+msgid "Pagination"
+msgstr "Sideinddeling"
+
+msgid "Previous page"
+msgstr "Forrige side"
+
+msgid "@dimension is illustrated by bubble size"
+msgstr "@dimension vises som boblens størrelse"
+
+msgid "Consideration"
+msgstr "Overvejelse"
+
+msgid "Go Back"
+msgstr "Tilbage"
+
+msgid "Report: @node_label"
+msgstr "Rapport: @node_label"
+
+msgid "Report: Project tracks"
+msgstr "Rapport: Projektspor"
+
+msgid "Rule"
+msgstr "Regel"
+
+msgid "The graph shows the automatically calculated evaluation."
+msgstr "Grafen viser den automatisk beregnede vurdering."
+
+msgid "This project has been manually evaluated."
+msgstr "Projektet er blevet vurderet manuelt."
+
+msgid "Create report for \"@trackLabel\" track"
+msgstr "Lav rapport for sporet \"@trackLabel\""
+
+msgid "Report: @label"
+msgstr "Rapport: @label"
+
+msgid "Set up thresholds for each project. The thresholds are used to determine when a suggested project track evaluation changes from \"Refused\" to \"Undecided\" to \"Approved\""
+msgstr "Opsæt tærskler for projekterne. Tærsklerne bruges til at afgøre, hvornår en foreslået vurdering af et projektspor skifter fra \"Afvist\" til \"Uafklaret\" til \"Godkendt\""
+
+msgid "Setup frontpage"
+msgstr "Opsæt forside"
+
+msgid "Setup thresholds"
+msgstr "Opsæt tærskler"
+
+msgid "User mail"
+msgstr "Brugerens e-mail"
+
+msgid "Latest"
+msgstr "Seneste"
+
+msgid "Current"
+msgstr "Nuværende"
